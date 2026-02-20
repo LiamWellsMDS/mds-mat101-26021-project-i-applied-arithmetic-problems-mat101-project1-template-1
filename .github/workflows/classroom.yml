@@ -121,7 +121,7 @@ jobs:
         command: bash ./scripts/test_suite.sh A10
         timeout: 1
         max-score: 1
-     - name: B1
+    - name: B1
       id: b1
       uses: classroom-resources/autograding-command-grader@v1
       with:
@@ -202,15 +202,6 @@ jobs:
         command: bash ./scripts/test_suite.sh B9
         timeout: 1
         max-score: 1
-    - name: B10_range
-      id: b10_range
-      uses: classroom-resources/autograding-command-grader@v1
-      with:
-        test-name: B10_range
-        setup-command: ''
-        command: bash ./scripts/test_suite.sh B10_range
-        timeout: 1
-        max-score: 1
     - name: B10_prime
       id: b10_prime
       uses: classroom-resources/autograding-command-grader@v1
@@ -220,13 +211,22 @@ jobs:
         command: bash ./scripts/test_suite.sh B10_prime
         timeout: 1
         max-score: 1
+    - name: B10_range
+      id: b10_range
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: B10_range
+        setup-command: ''
+        command: bash ./scripts/test_suite.sh B10_range
+        timeout: 1
+        max-score: 1
     - name: B10_perf
       id: b10_perf
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: B10_perf
         setup-command: ''
-        command: timeout 4s bash ./scripts/test_suite.sh B10_perf
+        command: timeout 2s bash ./scripts/test_suite.sh B10_perf
         timeout: 1
         max-score: 1
     - name: Autograding Reporter
@@ -253,8 +253,8 @@ jobs:
         B7_RESULTS: "${{steps.b7.outputs.result}}"
         B8_RESULTS: "${{steps.b8.outputs.result}}"
         B9_RESULTS: "${{steps.b9.outputs.result}}"
-        B10_RANGE_RESULTS: "${{steps.b10_range.outputs.result}}"
         B10_PRIME_RESULTS: "${{steps.b10_prime.outputs.result}}"
+        B10_RANGE_RESULTS: "${{steps.b10_range.outputs.result}}"
         B10_PERF_RESULTS: "${{steps.b10_perf.outputs.result}}"
       with:
-        runners: structure,build,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,b1,b2,b3,b4,b5,b6,b7,b8,b9,b10_range,b10_prime,b10_perf
+        runners: structure,build,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,b1,b2,b3,b4,b5,b6,b7,b8,b9,b10_prime,b10_range,b10_perf
