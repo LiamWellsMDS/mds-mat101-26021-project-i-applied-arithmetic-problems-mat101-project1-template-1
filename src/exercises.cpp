@@ -2,9 +2,9 @@
 Bachelor of Software Engineering
 Media Design School, 
 Auckland,    New Zealand
-(c) [Year] Media Design School                          <-- DO NOT FORGET TO FILL THIS OUT
-Author      :   [Your name as it appears in the LMS]    <-- DO NOT FORGET TO FILL THIS OUT
-Mail        :   [Your MDS email address]                <-- DO NOT FORGET TO FILL THIS OUT
+(c) 2026 Media Design School                         
+Author      :   Liam Wells    
+Mail        :   Liam.Wells@mds.ac.nz              
 File Name   :	exercises.cpp
 Description :	Source implementation file for exercises as part of MAT101 Project I
 **************************************************************************/
