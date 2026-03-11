@@ -32,7 +32,8 @@ namespace mat101 {
 double exA1_expression(double a, double b, double c, double d)
 {
     // TODO: compute and return the expression result
-    return 0.0;
+    double result = (a + b) * (c - d); //_a
+    return result;
 }
 
 // Part 2 of A1:
