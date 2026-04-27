@@ -29,10 +29,10 @@ namespace mat101 {
 //
 // Tip:
 // - use brackets exactly like the algebra.
-double exA1_expression(double a, double b, double c, double d)
+double exA1_expression(double _a, double _b, double _c, double _d)
 {
     // TODO: compute and return the expression result
-    double result = (a + b) * (c - d); //_a
+    double result = (_a + _b) * (_c - _d); 
     return result;
 }
 
@@ -59,10 +59,10 @@ float exA1_find_values_for_minus_two(double& out_a, double& out_b, double& out_c
     // TODO:
     // set values for each of the variables out_a, out_b, out_c, and out_d below
     // such that they result in the expression resolving to be -2
-    out_a = 0.0;
-    out_b = 0.0;
-    out_c = 0.0;
-    out_d = 0.0;
+    out_a = 1.0;
+    out_b = 1.0;
+    out_c = 1.0;
+    out_d = 2.0;
 
     return (float)exA1_expression(out_a, out_b, out_c, out_d);
 }
@@ -81,6 +81,10 @@ float exA1_find_values_for_minus_two(double& out_a, double& out_b, double& out_c
 bool exA2_sum_greater_than_diff(double a, double b, double c, double d)
 {
     // TODO: return whether (a + b) is greater than (c - d)
+    if ((a + b) > (c - d))
+    {
+        return true;
+    }
     return false;
 }
 
@@ -220,6 +224,8 @@ int exA9_compound_div(int a, int b)
 // - ie. Given m, x, and c, return the y value.
 //
 // Part 2) exA10_intersection(...)
+// y = 1x + 4 (m1, c1)
+// y = 2x + 7 (m2, c2)
 // - You are given TWO lines in slope-intercept form (m and c for each line).
 // - Find the point where both lines have the same x and y.
 // - Return the result as a Point struct.
@@ -248,7 +254,7 @@ double exA10_line(double _m, double _x, double _c)
 {
     // TODO: calculate and return the y axis value given the y-slope 
     // intercept form of a line equation
-    double y = 0;
+    double y = _m * _x + _c;
     return y;
 }
 
@@ -257,7 +263,10 @@ Point exA10_intersection(double _LineA_m, double _LineA_x, double _LineA_c, doub
 {
     // TODO return the Point struct containing the coordinate of the intersection
     // between the lines formed from by the given line equations for line A and line B
-    return Point{0.0, 0.0};
+    double x = (_LineB_c - _LineA_c) / (_LineA_m - _LineB_m);
+    double y = _LineA_m * x + _LineA_c;
+
+    return Point{x, y};
 }
 
 // ============================================================
