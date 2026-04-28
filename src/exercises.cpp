@@ -14,96 +14,100 @@ Description :	Source implementation file for exercises as part of MAT101 Project
 
 namespace mat101 {
 
-// ============================================================
-// PART A - Operators
-// ============================================================
+    // ============================================================
+    // PART A - Operators
+    // ============================================================
 
-//--------- EXERCISE A1 --------
-//---- Arithmetic Operators ----
-//
-// Learning goal:
-// - practise building an algebraic expression using +, -, and *.
-//
-// Task:
-// - compute the algebraic expression "(a + b) × (c - d)" and return it
-//
-// Tip:
-// - use brackets exactly like the algebra.
-double exA1_expression(double _a, double _b, double _c, double _d)
-{
-    // TODO: compute and return the expression result
-    double result = (_a + _b) * (_c - _d); 
-    return result;
-}
-
-// Part 2 of A1:
-//
-// Learning goal:
-// - practise rearranging a simple equation and choosing values that satisfy it.
-//
-// Task:
-// - choose four values (a,b,c,d) such that:
-//     (a + b) * (c - d) == -2
-//
-// IMPORTANT:
-// - You must SET the output parameters (out_a, out_b, out_c, out_d).
-//
-// Hints:
-// - Think of it as:
-//      X * Y = -2
-//   where X = (a+b) and Y = (c-d)
-// - Choose small integers for X and Y, like (1 and -2) or (2 and -1).
-// - Then pick a,b that add to X and pick c,d that subtract to Y.
-float exA1_find_values_for_minus_two(double& out_a, double& out_b, double& out_c, double& out_d)
-{
-    // TODO:
-    // set values for each of the variables out_a, out_b, out_c, and out_d below
-    // such that they result in the expression resolving to be -2
-    out_a = 1.0;
-    out_b = 1.0;
-    out_c = 1.0;
-    out_d = 2.0;
-
-    return (float)exA1_expression(out_a, out_b, out_c, out_d);
-}
-
-//--------- EXERCISE A2 --------
-//---- Relational Operators ----
-//
-// Learning goal:
-// - practise comparing two expressions using >.
-//
-// Task:
-// - return true if (a + b) is greater than (c - d), otherwise false.
-//
-// Tip:
-// - compute the left side and right side into variables first (readability).
-bool exA2_sum_greater_than_diff(double a, double b, double c, double d)
-{
-    // TODO: return whether (a + b) is greater than (c - d)
-    if ((a + b) > (c - d))
+    //--------- EXERCISE A1 --------
+    //---- Arithmetic Operators ----
+    //
+    // Learning goal:
+    // - practise building an algebraic expression using +, -, and *.
+    //
+    // Task:
+    // - compute the algebraic expression "(a + b) × (c - d)" and return it
+    //
+    // Tip:
+    // - use brackets exactly like the algebra.
+    double exA1_expression(double _a, double _b, double _c, double _d)
     {
-        return true;
+        // TODO: compute and return the expression result
+        double result = (_a + _b) * (_c - _d);
+        return result;
     }
-    return false;
-}
 
-//--------- EXERCISE A3 --------
-//---- Logical Operators ----
-//
-// Learning goal:
-// - practise combining conditions using && (AND).
-//
-// Task:
-// - return true when:
-//     (a + b) is non-zero  AND  (c - d) is zero
-//
-// Tip:
-// - "non-zero" means: expression != 0
-bool exA3_nonzero_and_zero(double a, double b, double c, double d)
-{
-    // TODO: return whether (a + b) is non-zero  AND  (c - d) is zero
-    return false;
+    // Part 2 of A1:
+    //
+    // Learning goal:
+    // - practise rearranging a simple equation and choosing values that satisfy it.
+    //
+    // Task:
+    // - choose four values (a,b,c,d) such that:
+    //     (a + b) * (c - d) == -2
+    //
+    // IMPORTANT:
+    // - You must SET the output parameters (out_a, out_b, out_c, out_d).
+    //
+    // Hints:
+    // - Think of it as:
+    //      X * Y = -2
+    //   where X = (a+b) and Y = (c-d)
+    // - Choose small integers for X and Y, like (1 and -2) or (2 and -1).
+    // - Then pick a,b that add to X and pick c,d that subtract to Y.
+    float exA1_find_values_for_minus_two(double& out_a, double& out_b, double& out_c, double& out_d)
+    {
+        // TODO:
+        // set values for each of the variables out_a, out_b, out_c, and out_d below
+        // such that they result in the expression resolving to be -2
+        out_a = 1.0;
+        out_b = 1.0;
+        out_c = 1.0;
+        out_d = 2.0;
+
+        return (float)exA1_expression(out_a, out_b, out_c, out_d);
+    }
+
+    //--------- EXERCISE A2 --------
+    //---- Relational Operators ----
+    //
+    // Learning goal:
+    // - practise comparing two expressions using >.
+    //
+    // Task:
+    // - return true if (a + b) is greater than (c - d), otherwise false.
+    //
+    // Tip:
+    // - compute the left side and right side into variables first (readability).
+    bool exA2_sum_greater_than_diff(double a, double b, double c, double d)
+    {
+        // TODO: return whether (a + b) is greater than (c - d)
+        if ((a + b) > (c - d))
+        {
+            return true;
+        }
+        else return false; // minor fix with else worth noting in github REMEMBER THIS!!!!
+    }
+
+    //--------- EXERCISE A3 --------
+    //---- Logical Operators ----
+    //
+    // Learning goal:
+    // - practise combining conditions using && (AND).
+    //
+    // Task:
+    // - return true when:
+    //     (a + b) is non-zero  AND  (c - d) is zero
+    //
+    // Tip:
+    // - "non-zero" means: expression != 0
+    bool exA3_nonzero_and_zero(double a, double b, double c, double d)
+    {
+        // TODO: return whether (a + b) is non-zero  AND  (c - d) is zero
+        if ((a + b) != 0 && (c - d) == 0)
+        {
+            return true;
+        }
+        else return false;
 }
 
 //--------- EXERCISE A4 --------
@@ -123,7 +127,17 @@ bool exA3_nonzero_and_zero(double a, double b, double c, double d)
 int exA4_inc_dec_calc(int a, int b, int c, int d)
 {
     // TODO implement as per task instructions above
-    return 0;
+    a++;
+    d--;
+    //check if d is 0
+    float sum;
+    if (d == 0)
+    {
+        sum = (a * b) - (c / d);
+    }
+    else 
+        sum = (a * b);
+    return sum;
 }
 
 //--------- EXERCISE A5 --------
@@ -137,7 +151,8 @@ int exA4_inc_dec_calc(int a, int b, int c, int d)
 int exA5_larger_sum_or_diff(int a, int b, int c, int d)
 {
     // TODO
-    return 0;
+    int larger = ((a + b) > (c - d)) ? (a + b) : (c - d);
+    return larger;
 }
 
 //--------- EXERCISE A6 --------
@@ -167,7 +182,11 @@ bool exA6_both_even_bitwise(int a, int b)
 bool exA7_divisible(int a, int b)
 {
     // TODO
-    return false;
+    if ((a % b) == 0)
+    {
+        return false;
+    }
+    else return true;
 }
 
 //--------- EXERCISE A8 --------
@@ -206,7 +225,13 @@ int exA8_shift_subtract(int a, int b)
 int exA9_compound_div(int a, int b)
 {
     // TODO
-    return 0;
+    a += 5;
+    b *= 2;
+    if (b == 0)
+    {
+        return 0;
+    }
+    else return (a / b);
 }
 
 //--------- EXERCISE A10 --------
@@ -280,7 +305,8 @@ Point exA10_intersection(double _LineA_m, double _LineA_x, double _LineA_c, doub
 double exB1_simple_interest(double P, double R, double T)
 {
     // TODO calculate the simple interest and return the result
-    return 0.0;
+    double Interest = P * R * T;
+    return Interest;
 }
 
 //--------- EXERCISE B2 --------
@@ -295,7 +321,23 @@ double exB1_simple_interest(double P, double R, double T)
 int exB2_quadratic_nature(double a, double b, double c)
 {
     // TODO
-    return -1;
+    if (a == 0)
+    { 
+        return -1;
+    }
+    else if ((b * b) - (4 * a * c) > 0)
+    {
+        return 2;
+    }
+    else if ((b * b) - (4 * a * c) == 0)
+    {
+        return 1;
+    }
+    else if ((b * b) - (4 * a * c) < 0)
+    {
+        return 0;
+    }
+    else return -1;
 }
 
 //--------- EXERCISE B3 --------
@@ -322,7 +364,18 @@ bool exB3_is_perfect_square(int n)
 int exB4_divisibility_class(int n)
 {
     // TODO
-    return 2;
+    if (n % 2 == 0 && n % 3 == 0)
+    {
+        return 0;
+    }
+    else if (n % 2 == 0 && n % 3 == 1)
+    {
+        return 1;
+    }
+    else if (n % 2 == 1 && n % 3 == 1)
+    {
+        return 2;
+    }
 }
 
 //--------- EXERCISE B5 --------
