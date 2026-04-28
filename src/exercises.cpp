@@ -401,7 +401,17 @@ void exB5_count_even_odd(int lower, int upper, int& evenCount, int& oddCount)
 double exB6_sum_0_to_n(int n)
 {
     // TODO
-    return 0.0;
+    int sum;
+    if (n < 0)
+    {
+        return 0.0;
+    }
+    else
+        for (int i = 0; n >= i; i++)
+        {
+            sum += i;
+        }
+        return sum;
 }
 
 //--------- EXERCISE B7 --------
@@ -420,10 +430,10 @@ void exB7_logical_expr(bool p, bool q,
                        bool& out_xor)
 {
     // TODO modify the below statements so that they resolve the corresponding formal logic statements
-    out_and = false;    // p AND q
-    out_or = false;     // p OR q
-    out_not_p = false;  // NOT p
-    out_xor = false;    // XOR: true iff p and q have different truth values
+    out_and = p && q;    // p AND q
+    out_or = p || q;     // p OR q
+    out_not_p = !p;  // NOT p
+    out_xor = p != q;    // XOR: true iff p and q have different truth values
 }
 
 //--------- EXERCISE B8 --------
@@ -440,8 +450,15 @@ void exB7_logical_expr(bool p, bool q,
 //  -45 -> 9
 int exB8_sum_digits_do_while(int n)
 {
+    int sum;
+    do
+    {
+        n % 10;
+        n /= 10;
+        sum += n;
+    } while (n == 1);
     // TODO
-    return 0;
+    return sum;
 }
 
 //--------- EXERCISE B9 --------
