@@ -119,8 +119,11 @@ int main()
     double B6b = exB6_sum_0_to_n(-1);
     std::cout << "exB6_sum_0_to_n = " << B6b << "\n";
     
-    //exB7_logical_expr
-    //UNTESTED
+    bool out_and, out_or, out_not_p, out_xor;
+    exB7_logical_expr(true, true, out_and, out_or, out_not_p, out_xor);
+    exB7_logical_expr(false, true, out_and, out_or, out_not_p, out_xor);
+    exB7_logical_expr(true, false, out_and, out_or, out_not_p, out_xor);
+    exB7_logical_expr(false, false, out_and, out_or, out_not_p, out_xor);
     
     //exB8_sum_digits_do_while
     // 
