@@ -77,24 +77,62 @@ int main()
     //exA8_shift_subtract
     //UNFINISHED
    
-    //exA9_compound_div
-    // 
+    //note decimals are not included given the function uses integers
+    int A9a = exA9_compound_div(7, 2);
+    std::cout << "exA9_compound_div = " << A9a << "\n";
+    int A9b = exA9_compound_div(2, 0);
+    std::cout << "exA9_compound_div = " << A9b << "\n";
     
     //exA10_line
-    //exA10_intersection
-    //BOTH UNFINISHED
+    //UNFINISHED
     
-    //exB1_simple_interest
-    //exB2_quadratic_nature
+    //exA10_intersection
+    //UNFINISHED
+    
+    double B1 = exB1_simple_interest(500, .10, 3);
+    std::cout << "exB1_simple_interest = " << B1 << "\n";
+
+    int B2a = exB2_quadratic_nature(5, 5, 2);
+    std::cout << "exB2_quadratic_nature = " << B2a << "\n";
+    int B2b = exB2_quadratic_nature(3, 6, 3);
+    std::cout << "exB2_quadratic_nature = " << B2b << "\n";
+    int B2c = exB2_quadratic_nature(2, 3, 1);
+    std::cout << "exB2_quadratic_nature = " << B2c << "\n";
+    int B2d = exB2_quadratic_nature(0, 1, 1);
+    std::cout << "exB2_quadratic_nature = " << B2d << "\n";
+    
     //exB3_is_perfect_square
-    //exB4_divisibility_class
+    //UNFINISHED
+    
+    double B4a = exB4_divisibility_class(6);
+    std::cout << "exB4_divisibility_class = " << B4a << "\n";
+    double B4b = exB4_divisibility_class(4);
+    std::cout << "exB4_divisibility_class = " << B4b << "\n";
+    double B4c = exB4_divisibility_class(7);
+    std::cout << "exB4_divisibility_class = " << B4c << "\n";
+
     //exB5_count_even_odd
-    //exB6_sum_0_to_n
+    //UNFINISHED
+    
+    double B6a = exB6_sum_0_to_n(5);
+    std::cout << "exB6_sum_0_to_n = " << B6a << "\n";
+    double B6b = exB6_sum_0_to_n(-1);
+    std::cout << "exB6_sum_0_to_n = " << B6b << "\n";
+    
     //exB7_logical_expr
+    //UNTESTED
+    
     //exB8_sum_digits_do_while
+    // 
+    
     //exB9_four_consecutive_sum_110
+    //UNFINISHED
+    
     //exB10_is_prime
+    //UNFINISHED
+    
     //exB10_primes_in_range
+    //UNFINISHED
 
     // Example: Line A is y = 2x + 3
     //          Line B is 2x + 3y = 5  -> y = (-2/3)x + (5/3)

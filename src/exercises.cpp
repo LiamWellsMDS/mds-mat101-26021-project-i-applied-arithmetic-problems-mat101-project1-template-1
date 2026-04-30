@@ -406,7 +406,7 @@ void exB5_count_even_odd(int lower, int upper, int& evenCount, int& oddCount)
 double exB6_sum_0_to_n(int n)
 {
     // TODO
-    int sum = 1;
+    int sum = 0;
     if (n < 0)
     {
         return 0.0;
