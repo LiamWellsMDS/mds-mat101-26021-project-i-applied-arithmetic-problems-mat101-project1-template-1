@@ -131,7 +131,7 @@ int exA4_inc_dec_calc(int a, int b, int c, int d)
     a++;
     d--;
     //check if d is 0
-    float sum;
+    int sum;
     if (d != 0)
     {
         sum = (a * b) - (c / d);
@@ -382,6 +382,7 @@ int exB4_divisibility_class(int n)
     {
         return 2;
     }
+    else return -1;
 }
 
 //--------- EXERCISE B5 --------
@@ -395,6 +396,17 @@ void exB5_count_even_odd(int lower, int upper, int& evenCount, int& oddCount)
     // TODO
     evenCount = 0;
     oddCount = 0;
+
+    for(int i = lower; i <= upper; i++)
+    {
+        if (i % 2 == 1)
+        {
+            oddCount += 1;
+        }
+        else evenCount += 1;
+    }
+
+    std::cout << "EvenCount: " << evenCount << " OddCount: " << oddCount << "\n";
 }
 
 //--------- EXERCISE B6 --------

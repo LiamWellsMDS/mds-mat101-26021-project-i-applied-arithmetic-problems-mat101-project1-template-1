@@ -110,9 +110,11 @@ int main()
     std::cout << "exB4_divisibility_class = " << B4b << "\n";
     double B4c = exB4_divisibility_class(7);
     std::cout << "exB4_divisibility_class = " << B4c << "\n";
+    double B4d = exB4_divisibility_class(3);
+    std::cout << "exB4_divisibility_class = " << B4d << "\n";
 
-    //exB5_count_even_odd
-    //UNFINISHED
+    int odds, evens;
+    exB5_count_even_odd(1, 9, evens, odds);
     
     double B6a = exB6_sum_0_to_n(5);
     std::cout << "exB6_sum_0_to_n = " << B6a << "\n";
@@ -125,7 +127,6 @@ int main()
     exB7_logical_expr(true, false, out_and, out_or, out_not_p, out_xor);
     exB7_logical_expr(false, false, out_and, out_or, out_not_p, out_xor);
     
-    //exB8_sum_digits_do_while
     int B8a = exB8_sum_digits_do_while(123);
     std::cout << "exB8_sum_digits_do_while = " << B8a << "\n";
     int B8b = exB8_sum_digits_do_while(0);
@@ -133,7 +134,6 @@ int main()
     int B8c = exB8_sum_digits_do_while(-45);
     std::cout << "exB8_sum_digits_do_while = " << B8c << "\n";
     
-    //exB9_four_consecutive_sum_110
     int x, y, z, v;
     int exB9 = exB9_four_consecutive_sum_110(x, y, z, v);
     std::cout << "xB9_four_consecutive_sum_110 = " << exB9 << "\n";
