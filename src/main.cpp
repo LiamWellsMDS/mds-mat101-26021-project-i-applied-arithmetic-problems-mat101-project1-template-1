@@ -102,7 +102,16 @@ int main()
     std::cout << "exB2_quadratic_nature = " << B2d << "\n";
     
     //exB3_is_perfect_square
-    //UNFINISHED
+    int B3a = exB3_is_perfect_square(3);
+    if (B3a == 1) {
+        std::cout << "exB3_is_perfect_square = " << "true" << "\n";
+    }
+    else std::cout << "exB3_is_perfect_square = " << "false" << "\n";
+    int B3b = exB3_is_perfect_square(4);
+    if (B3b == 1) {
+        std::cout << "exB3_is_perfect_square = " << "true" << "\n";
+    }
+    else std::cout << "exB3_is_perfect_square = " << "false" << "\n";
     
     double B4a = exB4_divisibility_class(6);
     std::cout << "exB4_divisibility_class = " << B4a << "\n";

@@ -356,6 +356,15 @@ int exB2_quadratic_nature(double a, double b, double c)
 // - Use sqrt(n), truncate to int, and square back to compare.
 bool exB3_is_perfect_square(int n)
 {
+    double root;
+    root = sqrt(n);
+    root = trunc(root);
+    root = pow(root, 2);
+    //int trun = trunc(root);
+    if (root == n)
+    {
+        return true;
+    }
     // TODO
     return false;
 }
