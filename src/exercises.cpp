@@ -455,13 +455,13 @@ void exB7_logical_expr(bool p, bool q,
 //  -45 -> 9
 int exB8_sum_digits_do_while(int n)
 {
-    int sum = 1;
+    int sum = 0, temp = 0;
     do
     {
-        n % 10;
-        n /= 10;
-        sum += n;
-    } while (n == 1);
+        temp = n % 10; // because it gets the remainder it will get the current digit
+        sum += abs(temp); //this should be here since we want to add the current digit before removing it
+        n /= 10; // removes a digit
+    } while (n != 0);
     // TODO
     return sum;
 }

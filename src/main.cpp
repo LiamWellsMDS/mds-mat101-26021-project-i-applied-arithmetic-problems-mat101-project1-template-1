@@ -126,7 +126,12 @@ int main()
     exB7_logical_expr(false, false, out_and, out_or, out_not_p, out_xor);
     
     //exB8_sum_digits_do_while
-    // 
+    int B8a = exB8_sum_digits_do_while(123);
+    std::cout << "exB8_sum_digits_do_while = " << B8a << "\n";
+    int B8b = exB8_sum_digits_do_while(0);
+    std::cout << "exB8_sum_digits_do_while = " << B8b << "\n";
+    int B8c = exB8_sum_digits_do_while(-45);
+    std::cout << "exB8_sum_digits_do_while = " << B8c << "\n";
     
     //exB9_four_consecutive_sum_110
     //UNFINISHED
