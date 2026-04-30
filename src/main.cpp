@@ -9,11 +9,11 @@ int main()
     std::cout << "This executable is for your manual testing.\n\n";
 
     // Example usage (you can expand this for your own checking)
-    const double v = exA1_expression(1, 2, 3, 4);
-    std::cout << "Example exA1_expression(1,2,3,4) = " << v << "\n";
+    const double A1a = exA1_expression(1, 2, 3, 4);
+    std::cout << "Example exA1_expression(1,2,3,4) = " << A1a << "\n";
     double a, b, c, d;
-    double f = exA1_find_values_for_minus_two(a, b, c, d);
-    std::cout << "Example exA1_find_values_for_minus_two = " << f << "\n";
+    double A1b = exA1_find_values_for_minus_two(a, b, c, d);
+    std::cout << "Example exA1_find_values_for_minus_two = " << A1b << "\n";
     
     bool A2a = exA2_sum_greater_than_diff(1, 2, 10, 4);
     if (A2a == 1) {
@@ -134,7 +134,9 @@ int main()
     std::cout << "exB8_sum_digits_do_while = " << B8c << "\n";
     
     //exB9_four_consecutive_sum_110
-    //UNFINISHED
+    int x, y, z, v;
+    int exB9 = exB9_four_consecutive_sum_110(x, y, z, v);
+    std::cout << "xB9_four_consecutive_sum_110 = " << exB9 << "\n";
     
     //exB10_is_prime
     //UNFINISHED

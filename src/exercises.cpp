@@ -11,6 +11,7 @@ Description :	Source implementation file for exercises as part of MAT101 Project
 
 #include "exercises.h"
 #include <cmath>
+#include <iostream>
 
 namespace mat101 {
 
@@ -486,9 +487,24 @@ int exB8_sum_digits_do_while(int n)
 // - Your instructor will check in the interview that you found them programmatically.
 int exB9_four_consecutive_sum_110(int& a, int& b, int& c, int& d)
 {
+    int sum, dummy;
     // TODO
     a = b = c = d = 0;
-    return 0;
+    b = a + 1; //a + 1
+    c = b + 1; //a + 2
+    d = c + 1; //a + 3
+    dummy = 110 - a - b - c - d;
+    //+1 +2 and +3 add up to 6 just leaving us with the variables to eliminate
+    a = dummy / 4;
+    //given we can treat the other variables as being equal to 'a' we can divide by 4 to get 'a's value
+    //a + b + c + d = 110
+    //we need a way to rearrange this equation using code - we want the value of 'a' primarily 
+    b = a + 1; 
+    c = b + 1; 
+    d = c + 1; 
+    std::cout << "a: " << a << " b: " << b << " c: " << c << " d: " << d << "\n";
+    sum = a + b + c + d;
+    return sum;
 }
 
 //--------- EXERCISE B10 --------
