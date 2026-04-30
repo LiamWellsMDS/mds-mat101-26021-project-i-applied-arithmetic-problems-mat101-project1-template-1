@@ -52,7 +52,6 @@ int main()
     int A5b = exA5_larger_sum_or_diff(2, 2, 6, 1);
     std::cout << "exA5_larger_sum_or_diff = " << A5b << "\n";
 
-    //UNFINISHED
     bool A6a = exA6_both_even_bitwise(4, 3);
     if (A6a == 1) {
         std::cout << "exA6_both_even_bitwise = " << "true" << "\n";
@@ -85,8 +84,10 @@ int main()
     }
     else std::cout << "exA7_divisible = " << "false" << "\n";
 
-    //exA8_shift_subtract
-    //UNFINISHED
+    int A8a = exA8_shift_subtract(7, 2);
+    std::cout << "exA8_shift_subtract = " << A8a << "\n";
+    int A8b = exA8_shift_subtract(7, 16);
+    std::cout << "exA8_shift_subtract = " << A8b << "\n";
    
     //note decimals are not included given the function uses integers
     int A9a = exA9_compound_div(7, 2);

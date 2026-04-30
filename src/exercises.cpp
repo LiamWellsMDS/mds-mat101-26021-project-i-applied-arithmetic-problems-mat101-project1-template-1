@@ -216,8 +216,9 @@ bool exA7_divisible(int a, int b)
 // - shifting right by 2 is like dividing by 4 (for ints, truncates)
 int exA8_shift_subtract(int a, int b)
 {
-    // TODO
-    return 0;
+    a = a << 2;
+    b = b >> 2;
+    return (a - b); 
 }
 
 //--------- EXERCISE A9 --------
