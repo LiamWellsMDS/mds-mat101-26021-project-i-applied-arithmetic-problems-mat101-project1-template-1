@@ -53,10 +53,21 @@ int main()
     std::cout << "exA5_larger_sum_or_diff = " << A5b << "\n";
 
     //UNFINISHED
-    int A6a = exA6_both_even_bitwise(2, 1);
-    std::cout << "exA6_both_even_bitwise = " << A6a << "\n";
-    int A6b = exA6_both_even_bitwise(2, 1);
-    std::cout << "exA6_both_even_bitwise = " << A6b << "\n";
+    bool A6a = exA6_both_even_bitwise(4, 3);
+    if (A6a == 1) {
+        std::cout << "exA6_both_even_bitwise = " << "true" << "\n";
+    }
+    else std::cout << "exA6_both_even_bitwise = " << "false" << "\n";
+    bool A6b = exA6_both_even_bitwise(4, 2);
+    if (A6b == 1) {
+        std::cout << "exA6_both_even_bitwise = " << "true" << "\n";
+    }
+    else std::cout << "exA6_both_even_bitwise = " << "false" << "\n";
+    bool A6c = exA6_both_even_bitwise(3, 2);
+    if (A6c == 1) {
+        std::cout << "exA6_both_even_bitwise = " << "true" << "\n";
+    }
+    else std::cout << "exA6_both_even_bitwise = " << "false" << "\n";
 
     bool A7a = exA7_divisible(4, 3);
     if (A7a == 1) {
@@ -101,7 +112,6 @@ int main()
     int B2d = exB2_quadratic_nature(0, 1, 1);
     std::cout << "exB2_quadratic_nature = " << B2d << "\n";
     
-    //exB3_is_perfect_square
     int B3a = exB3_is_perfect_square(3);
     if (B3a == 1) {
         std::cout << "exB3_is_perfect_square = " << "true" << "\n";

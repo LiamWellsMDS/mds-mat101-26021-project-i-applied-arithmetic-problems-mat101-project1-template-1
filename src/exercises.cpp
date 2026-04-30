@@ -168,8 +168,11 @@ int exA5_larger_sum_or_diff(int a, int b, int c, int d)
 //       ie. (n & 1) is zero (hint: check it for equality with 0)
 bool exA6_both_even_bitwise(int a, int b)
 {
-    // TODO
-    return false;
+    if ((a & 1) + (b & 1) == 0)
+    {
+        return true;
+    }
+    else return false;
 }
 
 //--------- EXERCISE A7 --------
