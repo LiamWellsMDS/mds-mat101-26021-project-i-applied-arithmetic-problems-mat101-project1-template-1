@@ -47,13 +47,43 @@ int main()
     int A4b = exA4_inc_dec_calc(1, 1, 1, 1);
     std::cout << "exA4_inc_dec_calc = " << A4b << "\n";
 
-    //exA5_larger_sum_or_diff
-    //exA6_both_even_bitwise
-    //exA7_divisible
+    int A5a = exA5_larger_sum_or_diff(2, 2, 3, 1);
+    std::cout << "exA5_larger_sum_or_diff = " << A5a << "\n";
+    int A5b = exA5_larger_sum_or_diff(2, 2, 6, 1);
+    std::cout << "exA5_larger_sum_or_diff = " << A5b << "\n";
+
+    //UNFINISHED
+    int A6a = exA6_both_even_bitwise(2, 1);
+    std::cout << "exA6_both_even_bitwise = " << A6a << "\n";
+    int A6b = exA6_both_even_bitwise(2, 1);
+    std::cout << "exA6_both_even_bitwise = " << A6b << "\n";
+
+    bool A7a = exA7_divisible(4, 3);
+    if (A7a == 1) {
+        std::cout << "exA7_divisible = " << "true" << "\n";
+    }
+    else std::cout << "exA7_divisible = " << "false" << "\n";
+    bool A7b = exA7_divisible(4, 2);
+    if (A7b == 1) {
+        std::cout << "exA7_divisible = " << "true" << "\n";
+    }
+    else std::cout << "exA7_divisible = " << "false" << "\n";
+    bool A7c = exA7_divisible(4, 0);
+    if (A7c == 1) {
+        std::cout << "exA7_divisible = " << "true" << "\n";
+    }
+    else std::cout << "exA7_divisible = " << "false" << "\n";
+
     //exA8_shift_subtract
+    //UNFINISHED
+   
     //exA9_compound_div
+    // 
+    
     //exA10_line
     //exA10_intersection
+    //BOTH UNFINISHED
+    
     //exB1_simple_interest
     //exB2_quadratic_nature
     //exB3_is_perfect_square

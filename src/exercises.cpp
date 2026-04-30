@@ -183,11 +183,15 @@ bool exA6_both_even_bitwise(int a, int b)
 bool exA7_divisible(int a, int b)
 {
     // TODO
-    if ((a % b) == 0)
+    if (b != 0)
     {
-        return false;
+        if ((a % b) == 0)
+        {
+            return false;
+        }
+        else return true;
     }
-    else return true;
+    else return false;
 }
 
 //--------- EXERCISE A8 --------
