@@ -131,9 +131,10 @@ int exA4_inc_dec_calc(int a, int b, int c, int d)
     d--;
     //check if d is 0
     float sum;
-    if (d == 0)
+    if (d != 0)
     {
         sum = (a * b) - (c / d);
+        return sum;
     }
     else 
         sum = (a * b);
@@ -401,7 +402,7 @@ void exB5_count_even_odd(int lower, int upper, int& evenCount, int& oddCount)
 double exB6_sum_0_to_n(int n)
 {
     // TODO
-    int sum;
+    int sum = 1;
     if (n < 0)
     {
         return 0.0;
@@ -450,7 +451,7 @@ void exB7_logical_expr(bool p, bool q,
 //  -45 -> 9
 int exB8_sum_digits_do_while(int n)
 {
-    int sum;
+    int sum = 1;
     do
     {
         n % 10;
