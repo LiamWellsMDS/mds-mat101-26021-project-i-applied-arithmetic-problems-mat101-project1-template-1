@@ -579,7 +579,9 @@ bool exB10_is_prime(int n)
             return true;
         }
         else if (n == 2)
+        {
             return true;
+        }
         else
             return false;
     }
@@ -598,7 +600,28 @@ int exB10_primes_in_range(int start, int end, int out[], int maxOut)
     // - maxOut is how many "slots" you are allowed to write into.
     //   Valid indexes are 0 up to (maxOut - 1).
     (void)start; (void)end; (void)out; (void)maxOut;
-    return 0;
+    int index = 0;
+    if (start > end || maxOut == 0)
+    {
+        return 0;
+    }
+    else
+    for (int i = start; i <= end; i++)
+    {
+        if (exB10_is_prime(i))
+        {
+            if (index <= (maxOut - 1))
+            {
+                out[index] = i;
+                index++;
+            }
+        }
+    }
+    /*std::cout << out[0] << "\n";
+    std::cout << out[1] << "\n";
+    std::cout << out[2] << "\n";*/
+    //return (sizeof(out) / sizeof(out[0])); - doesn't work?
+    return index;
 }
 
 } // namespace mat101

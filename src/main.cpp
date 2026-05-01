@@ -204,8 +204,21 @@ int main()
     }
     else std::cout << "exB10_is_prime = " << "not-prime" << "\n";
     
-    //exB10_primes_in_range
-    //UNFINISHED
+    int passout_a[3];
+    int exB10_a = exB10_primes_in_range(1, 5, passout_a, 3);
+    std::cout << "exB10_primes_in_range = " << exB10_a << "\n";
+    int passout_b[3] = {};
+    int exB10_b = exB10_primes_in_range(5, 1, passout_b, 3);
+    std::cout << "exB10_primes_in_range = " << exB10_b << "\n";
+    int passout_c[1];
+    int exB10_c = exB10_primes_in_range(1, 5, passout_c, 0);
+    std::cout << "exB10_primes_in_range = " << exB10_c << "\n";
+    int passout_d[2];
+    int exB10_d = exB10_primes_in_range(0, 6, passout_d, 2);
+    std::cout << "exB10_primes_in_range = " << exB10_d << "\n";
+    int passout_e[5];
+    int exB10_e = exB10_primes_in_range(2, 7, passout_e, 5);
+    std::cout << "exB10_primes_in_range = " << exB10_e << "\n";
 
     // Example: Line A is y = 2x + 3
     //          Line B is 2x + 3y = 5  -> y = (-2/3)x + (5/3)
