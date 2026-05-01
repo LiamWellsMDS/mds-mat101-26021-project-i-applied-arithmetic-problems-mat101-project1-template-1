@@ -158,8 +158,51 @@ int main()
     int exB9 = exB9_four_consecutive_sum_110(x, y, z, v);
     std::cout << "xB9_four_consecutive_sum_110 = " << exB9 << "\n";
     
-    //exB10_is_prime
-    //UNFINISHED
+    bool B10a = exB10_is_prime(0);
+    if (B10a == 1) {
+        std::cout << "exB10_is_prime = " << "prime" << "\n";
+    }
+    else std::cout << "exB10_is_prime = " << "not-prime" << "\n";
+    bool B10b = exB10_is_prime(1);
+    if (B10b == 1) {
+        std::cout << "exB10_is_prime = " << "prime" << "\n";
+    }
+    else std::cout << "exB10_is_prime = " << "not-prime" << "\n";
+    bool B10c = exB10_is_prime(2);
+    if (B10c == 1) {
+        std::cout << "exB10_is_prime = " << "prime" << "\n";
+    }
+    else std::cout << "exB10_is_prime = " << "not-prime" << "\n";
+    bool B10d = exB10_is_prime(3);
+    if (B10d == 1) {
+        std::cout << "exB10_is_prime = " << "prime" << "\n";
+    }
+    else std::cout << "exB10_is_prime = " << "not-prime" << "\n";
+    bool B10e = exB10_is_prime(4);
+    if (B10e == 1) {
+        std::cout << "exB10_is_prime = " << "prime" << "\n";
+    }
+    else std::cout << "exB10_is_prime = " << "not-prime" << "\n";
+    bool B10f = exB10_is_prime(5);
+    if (B10f == 1) {
+        std::cout << "exB10_is_prime = " << "prime" << "\n";
+    }
+    else std::cout << "exB10_is_prime = " << "not-prime" << "\n";
+    bool B10g = exB10_is_prime(6);
+    if (B10g == 1) {
+        std::cout << "exB10_is_prime = " << "prime" << "\n";
+    }
+    else std::cout << "exB10_is_prime = " << "not-prime" << "\n";
+    bool B10h = exB10_is_prime(7);
+    if (B10h == 1) {
+        std::cout << "exB10_is_prime = " << "prime" << "\n";
+    }
+    else std::cout << "exB10_is_prime = " << "not-prime" << "\n";
+    bool B10i = exB10_is_prime(14);
+    if (B10i == 1) {
+        std::cout << "exB10_is_prime = " << "prime" << "\n";
+    }
+    else std::cout << "exB10_is_prime = " << "not-prime" << "\n";
     
     //exB10_primes_in_range
     //UNFINISHED

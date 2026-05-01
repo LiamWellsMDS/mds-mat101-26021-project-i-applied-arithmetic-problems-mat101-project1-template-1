@@ -567,7 +567,22 @@ int exB9_four_consecutive_sum_110(int& a, int& b, int& c, int& d)
 bool exB10_is_prime(int n)
 {
     // TODO
-    return false;
+    if (n <= 1)
+    {
+        return false;
+    } 
+    else 
+    for (int i = 2; i != sqrt(n); i++)
+    {
+        if (n % i)
+        {
+            return true;
+        }
+        else if (n == 2)
+            return true;
+        else
+            return false;
+    }
 }
 
 int exB10_primes_in_range(int start, int end, int out[], int maxOut)
