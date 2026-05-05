@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> 
 #include "exercises.h"
 
 using namespace mat101;
@@ -94,12 +94,6 @@ int main()
     std::cout << "exA9_compound_div = " << A9a << "\n";
     int A9b = exA9_compound_div(2, 0);
     std::cout << "exA9_compound_div = " << A9b << "\n";
-    
-    //exA10_line
-    //UNFINISHED
-    
-    //exA10_intersection
-    //UNFINISHED
     
     double B1 = exB1_simple_interest(500, .10, 3);
     std::cout << "exB1_simple_interest = " << B1 << "\n";
@@ -220,6 +214,8 @@ int main()
     int exB10_e = exB10_primes_in_range(2, 7, passout_e, 5);
     std::cout << "exB10_primes_in_range = " << exB10_e << "\n";
 
+    //exA10
+    //did earlier for workshop so its not in the same order
     // Example: Line A is y = 2x + 3
     //          Line B is 2x + 3y = 5  -> y = (-2/3)x + (5/3)
     const double mA = 2.0;
@@ -229,6 +225,24 @@ int main()
 
     Point p = exA10_intersection(mA, 0.0, cA, mB, 0.0, cB);
     std::cout << "Example intersection: (" << p.x << ", " << p.y << ")\n";
+
+    const double mC = 2.0;
+    const double cC = 2.0;
+    const double mD = 2.0;
+    const double cD = 2.0;
+
+    Point o = exA10_intersection(mC, 0.0, cC, mD, 0.0, cD);
+    std::cout << "Example intersection: (" << o.x << ", " << o.y << ")\n";
+
+    const double mE = 2.0;
+    const double cE = 5.0/2.0;
+    const double xE = 3.0;
+    const double mF = 1.0;
+    const double cF = 4.0;
+    const double xF = 3.0;
+
+    Point j = exA10_intersection(mE, xE, cE, mF, xF, cF);
+    std::cout << "Example intersection: (" << j.x << ", " << j.y << ")\n";
 
     return 0;
 }

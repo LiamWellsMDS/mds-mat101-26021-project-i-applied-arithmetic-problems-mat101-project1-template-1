@@ -11,7 +11,7 @@ Description :	Source implementation file for exercises as part of MAT101 Project
 
 #include "exercises.h"
 #include <cmath>
-#include <iostream>
+#include <iostream> //only used for testing
 
 namespace mat101 {
 
@@ -288,6 +288,7 @@ int exA9_compound_div(int a, int b)
 double exA10_line(double _m, double _x, double _c)
 {
     // TODO: calculate and return the y axis value given the y-slope 
+    //??? we shouldn't need anything
     // intercept form of a line equation
     double y = _m * _x + _c;
     return y;
@@ -298,8 +299,13 @@ Point exA10_intersection(double _LineA_m, double _LineA_x, double _LineA_c, doub
 {
     // TODO return the Point struct containing the coordinate of the intersection
     // between the lines formed from by the given line equations for line A and line B
+    if (_LineA_m == _LineB_m)
+    {
+        return Point{ 0.0, 0.0 };
+    }
+
     double x = (_LineB_c - _LineA_c) / (_LineA_m - _LineB_m);
-    double y = _LineA_m * x + _LineA_c;
+    double y = exA10_line(_LineA_m, x, _LineA_c);
 
     return Point{x, y};
 }
