@@ -580,7 +580,7 @@ bool exB10_is_prime(int n)
     //else was redundant here
     for (int i = 2; i <= sqrt(n); i++)
     {
-        if (n % i)
+        if (n % i == 0)
         {
             return true;
         }
@@ -591,6 +591,8 @@ bool exB10_is_prime(int n)
         else
             return false;
     }
+
+    return true;
 }
 
 int exB10_primes_in_range(int start, int end, int out[], int maxOut)
