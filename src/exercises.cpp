@@ -393,11 +393,11 @@ int exB4_divisibility_class(int n)
     {
         return 0;
     }
-    else if (n % 2 == 0 && n % 3 == 1)
+    else if (n % 2 == 0 && n % 3 != 0)
     {
         return 1;
     }
-    else if (n % 2 == 1 && n % 3 == 1)
+    else if (n % 2 != 0 && n % 3 != 0)
     {
         return 2;
     }
