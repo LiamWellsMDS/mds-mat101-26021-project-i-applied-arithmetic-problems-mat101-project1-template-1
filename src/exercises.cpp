@@ -582,14 +582,8 @@ bool exB10_is_prime(int n)
     {
         if (n % i == 0)
         {
-            return true;
+            return false; //means a divisor is found so it should be false
         }
-        else if (n == 2)
-        {
-            return true;
-        }
-        else
-            return false;
     }
 
     return true;
