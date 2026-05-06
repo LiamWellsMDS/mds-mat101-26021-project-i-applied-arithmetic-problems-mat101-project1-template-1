@@ -597,6 +597,12 @@ int exB9_four_consecutive_sum_110(int& a, int& b, int& c, int& d)
 // - exB10_primes_in_range MUST call exB10_is_prime (don't duplicate logic).
 bool exB10_is_prime(int n)
 {
+    //numbers below 2 are not considered prime, even if 1 and 0 technically follow the rules of a prime number
+    if (n <= 1)
+    {
+        return false;
+    }
+
     for (int i = 2; i <= sqrt(n); i++)
     {
         if (n % i == 0)
