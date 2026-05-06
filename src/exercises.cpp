@@ -191,9 +191,9 @@ bool exA7_divisible(int a, int b)
     {
         if ((a % b) == 0)
         {
-            return false;
+            return true;
         }
-        else return true;
+        else return false;
     }
     else return false;
 }
