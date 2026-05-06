@@ -578,7 +578,7 @@ bool exB10_is_prime(int n)
         return false;
     } 
     //else was redundant here
-    for (int i = 2; i != sqrt(n); i++)
+    for (int i = 2; i <= sqrt(n); i++)
     {
         if (n % i)
         {
