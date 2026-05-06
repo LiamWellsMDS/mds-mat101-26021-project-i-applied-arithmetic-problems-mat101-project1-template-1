@@ -11,7 +11,8 @@ Description :	Source implementation file for exercises as part of MAT101 Project
 
 #include "exercises.h"
 #include <cmath>
-#include <iostream> //only used for testing
+//added for using std::cout for easier testing for some problems
+//#include <iostream> 
 
 namespace mat101 {
 
@@ -32,7 +33,6 @@ namespace mat101 {
     // - use brackets exactly like the algebra.
     double exA1_expression(double _a, double _b, double _c, double _d)
     {
-        // TODO: compute and return the expression result
         double result = (_a + _b) * (_c - _d);
         return result;
     }
@@ -57,9 +57,6 @@ namespace mat101 {
     // - Then pick a,b that add to X and pick c,d that subtract to Y.
     float exA1_find_values_for_minus_two(double& out_a, double& out_b, double& out_c, double& out_d)
     {
-        // TODO:
-        // set values for each of the variables out_a, out_b, out_c, and out_d below
-        // such that they result in the expression resolving to be -2
         out_a = 1.0;
         out_b = 1.0;
         out_c = 1.0;
@@ -81,12 +78,12 @@ namespace mat101 {
     // - compute the left side and right side into variables first (readability).
     bool exA2_sum_greater_than_diff(double a, double b, double c, double d)
     {
-        // TODO: return whether (a + b) is greater than (c - d)
+        //note else isn't required because return instantly ends the function
         if ((a + b) > (c - d))
         {
             return true;
         }
-        else return false; // minor fix with else worth noting in github REMEMBER THIS!!!!
+        return false; 
     }
 
     //--------- EXERCISE A3 --------
@@ -103,12 +100,13 @@ namespace mat101 {
     // - "non-zero" means: expression != 0
     bool exA3_nonzero_and_zero(double a, double b, double c, double d)
     {
-        // TODO: return whether (a + b) is non-zero  AND  (c - d) is zero
+        /*checks if a + b is not equal to 0 and c - d is equal to 0
+        note how additional brackets aren't needed when using AND*/
         if ((a + b) != 0 && (c - d) == 0)
         {
             return true;
         }
-        else return false;
+        return false;
 }
 
 //--------- EXERCISE A4 --------
@@ -127,17 +125,19 @@ namespace mat101 {
 // - if d becomes 0, treat (c / d) as 0.
 int exA4_inc_dec_calc(int a, int b, int c, int d)
 {
-    // TODO implement as per task instructions above
+    //increment and decrement simply increase or decrease a number by 1
     a++;
     d--;
-    //check if d is 0
     int sum;
+
+    //check if d is 0
     if (d != 0)
     {
         sum = (a * b) - (c / d);
         return sum;
     }
     else 
+        //because c / d is equal to 0 we don't need to bother minusing it
         sum = (a * b);
     return sum;
 }
@@ -152,7 +152,8 @@ int exA4_inc_dec_calc(int a, int b, int c, int d)
 // - return the larger of (a + b) and (c - d) using ONE ternary expression.
 int exA5_larger_sum_or_diff(int a, int b, int c, int d)
 {
-    // TODO
+    /*sets larger to the "true" or "false" value of the operator based on which equation is larger
+    this is done in the second half of the operation*/
     int larger = ((a + b) > (c - d)) ? (a + b) : (c - d);
     return larger;
 }
@@ -168,6 +169,9 @@ int exA5_larger_sum_or_diff(int a, int b, int c, int d)
 //       ie. (n & 1) is zero (hint: check it for equality with 0)
 bool exA6_both_even_bitwise(int a, int b)
 {
+    /*if the first bit is 0 the number is even otherwise it is odd
+    the bitwise & returns true (1) if the given number has a given bit value
+    given 1 is true and 0 is false we can add the bitwise & 1 of both numbers together to get if the numbers are both even*/
     if ((a & 1) + (b & 1) == 0)
     {
         return true;
@@ -186,16 +190,16 @@ bool exA6_both_even_bitwise(int a, int b)
 // - if b == 0, return false (divide-by-zero is a crash).
 bool exA7_divisible(int a, int b)
 {
-    // TODO
     if (b != 0)
     {
+        //if a number can be divided by another the divisor will return 0
         if ((a % b) == 0)
         {
             return true;
         }
         else return false;
     }
-    else return false;
+    return false;
 }
 
 //--------- EXERCISE A8 --------
@@ -216,6 +220,8 @@ bool exA7_divisible(int a, int b)
 // - shifting right by 2 is like dividing by 4 (for ints, truncates)
 int exA8_shift_subtract(int a, int b)
 {
+    /*bit shift function is used to shift the bits 2 spaces
+    if a bit such as 2 was shifted right by 2 (2/4 = 0.5) it would return 0 due to us shifting an int which does not handle decimal values*/
     a = a << 2;
     b = b >> 2;
     return (a - b); 
@@ -234,14 +240,14 @@ int exA8_shift_subtract(int a, int b)
 // - if b becomes 0, return 0 (divide-by-zero is a crash).
 int exA9_compound_div(int a, int b)
 {
-    // TODO
+    //compound assignments work like so: a + a = 5 is the same as a += 5
     a += 5;
     b *= 2;
     if (b == 0)
     {
         return 0;
     }
-    else return (a / b);
+    return (a / b);
 }
 
 //--------- EXERCISE A10 --------
@@ -287,9 +293,8 @@ int exA9_compound_div(int a, int b)
 // Part 1 implement y-slope intercept calcuation for a line
 double exA10_line(double _m, double _x, double _c)
 {
-    // TODO: calculate and return the y axis value given the y-slope 
-    //??? we shouldn't need anything
-    // intercept form of a line equation
+    /*slope - intercept equation for a line
+    m is gradient, c is y intercept, and x is the lines x value*/
     double y = _m * _x + _c;
     return y;
 }
@@ -297,14 +302,24 @@ double exA10_line(double _m, double _x, double _c)
 // Part 2 for Lines + Simultaneous Equations, find and return point
 Point exA10_intersection(double _LineA_m, double _LineA_x, double _LineA_c, double _LineB_m, double _LineB_x, double _LineB_c)
 {
-    // TODO return the Point struct containing the coordinate of the intersection
-    // between the lines formed from by the given line equations for line A and line B
+    //returns 0 if both lines are the exact same
     if (_LineA_m == _LineB_m)
     {
+        //fairly self explanatory point structure has been used here (it returns 2 values in the form of a point - (x, y))
         return Point{ 0.0, 0.0 };
     }
 
+    /*at the intersect point both equations y value is equal so we merge the slope - intercept equation for both lines to get a single simultaneous equation
+    _LineA_m * x + LineA_c = _LineB_m * x + _LineB_c
+    we want to rearrange this equation to solve for x (note we can't simplify x out of the equation here)
+    _LinaA_m * x + _LineB_m * x = _LineB_c - _LineA_c
+    we want to remove that additional x so we can simplify the equation to
+    (_LinaA_m + _LineB_m) * x = _LineB_c - _LineA_c
+    then we can divide giving us our final equation
+    x = (_LineB_c - _LineA_c) / (_LinaA_m + _LineB_m)
+    so we can use this equation to find the x intersect*/
     double x = (_LineB_c - _LineA_c) / (_LineA_m - _LineB_m);
+    //we can now use the x intersect value we just got to solve for the y intersect by using the slope-intercept equation
     double y = exA10_line(_LineA_m, x, _LineA_c);
 
     return Point{x, y};
@@ -320,7 +335,6 @@ Point exA10_intersection(double _LineA_m, double _LineA_x, double _LineA_c, doub
 // Simple Interest = Principal Amount × Interest Rate × Time
 double exB1_simple_interest(double P, double R, double T)
 {
-    // TODO calculate the simple interest and return the result
     double Interest = P * R * T;
     return Interest;
 }
@@ -336,24 +350,27 @@ double exB1_simple_interest(double P, double R, double T)
 // Remember, if a == 0, it is NOT a quadratic. (ie. return -1)
 int exB2_quadratic_nature(double a, double b, double c)
 {
-    // TODO
     if (a == 0)
     { 
         return -1;
     }
+    //b^2 - 4ac > 0 means there are exactly 2 roots (both answers are different)
     else if ((b * b) - (4 * a * c) > 0)
     {
         return 2;
     }
+    //b^2 - 4ac = 0 means there is exactly 1 root (both answers are the same)
     else if ((b * b) - (4 * a * c) == 0)
     {
         return 1;
     }
+    //b^2 - 4ac < 0 means there are no real roots (cannot be solved)
     else if ((b * b) - (4 * a * c) < 0)
     {
         return 0;
     }
-    else return -1;
+    //additional safety check
+    return -1;
 }
 
 //--------- EXERCISE B3 --------
@@ -366,16 +383,18 @@ int exB2_quadratic_nature(double a, double b, double c)
 // - Use sqrt(n), truncate to int, and square back to compare.
 bool exB3_is_perfect_square(int n)
 {
+    //a perfect square is a product of an integer multiplied by itself (2 x 2 but not 1.5 x 1.5 would be valid)
     double root;
+    //sqrt is square root of a number
     root = sqrt(n);
+    //rounds towards 0 functionally returning only the integer part of the number
     root = trunc(root);
+    //using the math function we can put root to a power instead of multiplying it by itself
     root = pow(root, 2);
-    //int trun = trunc(root);
     if (root == n)
     {
         return true;
     }
-    // TODO
     return false;
 }
 
@@ -388,11 +407,11 @@ bool exB3_is_perfect_square(int n)
 // 2 : neither divisible by 2 nor by 3
 int exB4_divisibility_class(int n)
 {
-    // TODO
     if (n % 2 == 0 && n % 3 == 0)
     {
         return 0;
     }
+    //notably we want to use != 0 given we know that if a divisor returns 0 the number we are testing is divisible so this simply does the opposite
     else if (n % 2 == 0 && n % 3 != 0)
     {
         return 1;
@@ -401,7 +420,7 @@ int exB4_divisibility_class(int n)
     {
         return 2;
     }
-    else return -1;
+    return -1;
 }
 
 //--------- EXERCISE B5 --------
@@ -412,20 +431,21 @@ int exB4_divisibility_class(int n)
 // - if lower > upper, treat as empty range
 void exB5_count_even_odd(int lower, int upper, int& evenCount, int& oddCount)
 {
-    // TODO
-    evenCount = 0;
-    oddCount = 0;
+    //setting multiple variables of the same type at the same time
+    evenCount = 0, oddCount = 0;
 
+    //for loops have 3 conditions, 1 sets a value, 2 is the condition the program runs until completed, 3 is an event that happens each loop
     for(int i = lower; i <= upper; i++)
     {
-        if (i % 2 == 1)
+        if (i % 2 != 0)
         {
-            oddCount += 1;
+            oddCount ++;
         }
-        else evenCount += 1;
+        else evenCount ++;
     }
 
-    std::cout << "EvenCount: " << evenCount << " OddCount: " << oddCount << "\n";
+    /*std::cout used for testing given you cannot return values from a void function
+    std::cout << "EvenCount: " << evenCount << " OddCount: " << oddCount << "\n";*/
 }
 
 //--------- EXERCISE B6 --------
@@ -437,18 +457,18 @@ void exB5_count_even_odd(int lower, int upper, int& evenCount, int& oddCount)
 // - If n < 0, return 0.
 double exB6_sum_0_to_n(int n)
 {
-    // TODO
     int sum = 0;
     if (n < 0)
     {
         return 0.0;
     }
     else
+        //because its inclusive we want to use >= so that it stops after it reaches n not before
         for (int i = 0; n >= i; i++)
         {
             sum += i;
         }
-        return sum;
+    return sum;
 }
 
 //--------- EXERCISE B7 --------
@@ -466,11 +486,10 @@ void exB7_logical_expr(bool p, bool q,
                        bool& out_not_p,
                        bool& out_xor)
 {
-    // TODO modify the below statements so that they resolve the corresponding formal logic statements
     out_and = p && q;    // p AND q
     out_or = p || q;     // p OR q
-    out_not_p = !p;  // NOT p
-    out_xor = p != q;    // XOR: true iff p and q have different truth values
+    out_not_p = !p;      // NOT p
+    out_xor = p != q;    // XOR: true iff p and q have different truth values (not equal to each other)
 }
 
 //--------- EXERCISE B8 --------
@@ -490,11 +509,13 @@ int exB8_sum_digits_do_while(int n)
     int sum = 0, temp = 0;
     do
     {
-        temp = n % 10; // because it gets the remainder it will get the current digit
-        sum += abs(temp); //this should be here since we want to add the current digit before removing it
-        n /= 10; // removes a digit
+        // because it gets the remainder it will get the current digit
+        temp = n % 10; 
+        //this should be here since we want to add the current digit before removing it
+        sum += abs(temp); 
+        // removes a digit
+        n /= 10; 
     } while (n != 0);
-    // TODO
     return sum;
 }
 
@@ -519,21 +540,25 @@ int exB8_sum_digits_do_while(int n)
 int exB9_four_consecutive_sum_110(int& a, int& b, int& c, int& d)
 {
     int sum, dummy;
-    // TODO
     a = b = c = d = 0;
     b = a + 1; //a + 1
     c = b + 1; //a + 2
     d = c + 1; //a + 3
+
+    //+1 +2 and +3 add up to 6 just leaving us with the variables (which we have already simplified to all be a) to eliminate
     dummy = 110 - a - b - c - d;
-    //+1 +2 and +3 add up to 6 just leaving us with the variables to eliminate
-    a = dummy / 4;
+
     //given we can treat the other variables as being equal to 'a' we can divide by 4 to get 'a's value
-    //a + b + c + d = 110
-    //we need a way to rearrange this equation using code - we want the value of 'a' primarily 
+    a = dummy / 4;
+
+    //now we need to test we have found the 4 consecutive integers so we reset the other variables and add them together to get our final answer of 110
     b = a + 1; 
-    c = b + 1; 
-    d = c + 1; 
+    c = b + 1;
+    d = c + 1;
+
+    /*used for testing
     std::cout << "a: " << a << " b: " << b << " c: " << c << " d: " << d << "\n";
+    a + b + c + d = 110*/
     sum = a + b + c + d;
     return sum;
 }
@@ -572,17 +597,12 @@ int exB9_four_consecutive_sum_110(int& a, int& b, int& c, int& d)
 // - exB10_primes_in_range MUST call exB10_is_prime (don't duplicate logic).
 bool exB10_is_prime(int n)
 {
-    // TODO
-    if (n <= 1)
-    {
-        return false;
-    } 
-    //else was redundant here
     for (int i = 2; i <= sqrt(n); i++)
     {
         if (n % i == 0)
         {
-            return false; //means a divisor is found so it should be false
+            //if a divisor is found the number is not prime (a prime number is any number with 2 factors being itself and 1)
+            return false; 
         }
     }
 
@@ -591,18 +611,9 @@ bool exB10_is_prime(int n)
 
 int exB10_primes_in_range(int start, int end, int out[], int maxOut)
 {
-    // TODO:
-    // - if start > end, return 0
-    // - loop i from start to end inclusive
-    // - if exB10_is_prime(i), store into out[] (if space remains)
-    // - return how many you stored
-    //
-    // Reminder about arrays:
-    // - out[] is a block of memory already created by the caller.
-    // - maxOut is how many "slots" you are allowed to write into.
-    //   Valid indexes are 0 up to (maxOut - 1).
     (void)start; (void)end; (void)out; (void)maxOut;
     int index = 0;
+    //if maxOut == 0 there are no primes, start > end is impossible so we return 0 for that as well
     if (start > end || maxOut == 0)
     {
         return 0;
@@ -612,6 +623,8 @@ int exB10_primes_in_range(int start, int end, int out[], int maxOut)
     {
         if (exB10_is_prime(i))
         {
+            /*using < is functionally the same as maxOut - 1
+            we are using index to track how many primes we have appended to our out array*/
             if (index < maxOut)
             {
                 out[index] = i;
@@ -619,11 +632,12 @@ int exB10_primes_in_range(int start, int end, int out[], int maxOut)
             }
         }
     }
-    /*std::cout << out[0] << "\n";
+    /*used for testing given we return index rather than length due to array length being tedious to grab in C++
+    although note that returning index is functionally the same as returning array length
+    std::cout << out[0] << "\n";
     std::cout << out[1] << "\n";
     std::cout << out[2] << "\n";*/
-    //return (sizeof(out) / sizeof(out[0])); - doesn't work?
     return index;
 }
 
-} // namespace mat101
+} // namespace mat101 (where point is derived)

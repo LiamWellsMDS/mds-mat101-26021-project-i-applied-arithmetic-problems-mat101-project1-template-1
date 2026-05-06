@@ -88,6 +88,8 @@ int main()
     std::cout << "exA8_shift_subtract = " << A8a << "\n";
     int A8b = exA8_shift_subtract(7, 16);
     std::cout << "exA8_shift_subtract = " << A8b << "\n";
+    int A8c = exA8_shift_subtract(1, 1);
+    std::cout << "exA8_shift_subtract = " << A8c << "\n";
    
     //note decimals are not included given the function uses integers
     int A9a = exA9_compound_div(7, 2);
@@ -134,6 +136,10 @@ int main()
     std::cout << "exB6_sum_0_to_n = " << B6a << "\n";
     double B6b = exB6_sum_0_to_n(-1);
     std::cout << "exB6_sum_0_to_n = " << B6b << "\n";
+    double B6c = exB6_sum_0_to_n(0);
+    std::cout << "exB6_sum_0_to_n = " << B6c << "\n";
+    double B6d = exB6_sum_0_to_n(1);
+    std::cout << "exB6_sum_0_to_n = " << B6d << "\n";
     
     bool out_and, out_or, out_not_p, out_xor;
     exB7_logical_expr(true, true, out_and, out_or, out_not_p, out_xor);
@@ -215,7 +221,8 @@ int main()
     std::cout << "exB10_primes_in_range = " << exB10_e << "\n";
 
     //exA10
-    //did earlier for workshop so its not in the same order
+    //did most of the code earlier during a workshop so its not in the same order for testing purposes
+    // 
     // Example: Line A is y = 2x + 3
     //          Line B is 2x + 3y = 5  -> y = (-2/3)x + (5/3)
     const double mA = 2.0;
