@@ -302,7 +302,7 @@ double exA10_line(double _m, double _x, double _c)
 // Part 2 for Lines + Simultaneous Equations, find and return point
 Point exA10_intersection(double _LineA_m, double _LineA_x, double _LineA_c, double _LineB_m, double _LineB_x, double _LineB_c)
 {
-    //returns 0 if both lines are the exact same
+    //returns 0 if both lines are the same (parallel or exact same line twice)
     if (_LineA_m == _LineB_m)
     {
         //fairly self explanatory point structure has been used here (it returns 2 values in the form of a point - (x, y))
