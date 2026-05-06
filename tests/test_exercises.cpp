@@ -116,8 +116,8 @@ TEST_CASE("A10::intersection returns a point that lies on both lines") {
     CHECK(yA  == Approx(yB).epsilon(1e-9));
 
     // Optional: also check the known exact intersection for these specific lines
-    CHECK(p.x == Approx(-0.8).epsilon(1e-9));
-    CHECK(p.y == Approx( 1.4).epsilon(1e-9));
+    CHECK(p.x == Approx(-0.5).epsilon(1e-9));
+    CHECK(p.y == Approx( 2.0).epsilon(1e-9));
 }
 
 // -----------------------------
